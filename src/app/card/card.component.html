@@ -1,0 +1,13 @@
+        <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">{{title}}</h5>
+            <h6 class="card-price text-center">${{price}}<span class="period">/{{period}}</span></h6>
+            <hr>
+            <ul class="fa-ul">
+                <li *ngFor="let ele of fee">
+                    <span 
+                    [ngClass]="{strike: ele.available=='no'}">{{ele.name}}
+                    </span></li>
+            </ul>
+            <a href="#" class="btn btn-block btn-primary text-uppercase">Proceed</a>
+        </div>
+    
